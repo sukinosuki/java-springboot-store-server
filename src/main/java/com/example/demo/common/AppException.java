@@ -1,0 +1,22 @@
+package com.example.demo.common;
+
+
+import lombok.AllArgsConstructor;
+import org.springframework.lang.Nullable;
+
+@AllArgsConstructor
+public class AppException extends RuntimeException {
+
+    public AppErrorCode code;
+    @Nullable
+    public String message;
+
+    public static AppException unAuthorizedError(String msg) {
+
+        return new AppException(AppErrorCode.UNAUTHORIZED, msg);
+    }
+
+    public static AppException actionFailError(String msg){
+        return new AppException(AppErrorCode.ACTION_FAIL, msg);
+    }
+}

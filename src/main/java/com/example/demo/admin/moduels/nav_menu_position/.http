@@ -1,0 +1,28 @@
+#@name all
+GET {{host}}/api/v1/nav-menu-position
+
+###
+# @name add
+POST {{host}}/api/v1/nav-menu-position
+Content-Type: application/json
+
+{
+  "name": "pc-首页-banner2233",
+  "value": "21121",
+  "description": 11,
+  "sort": 1
+}
+
+###
+#@name update
+PUT {{host}}/api/v1/nav-menu-position/1
+Content-Type: application/json
+
+{
+  "name": "111",
+  "value": "111"
+}
+
+###
+#@name delete
+DELETE {{host}}/api/v1/nav-menu-position/9

@@ -1,0 +1,10 @@
+# @name add
+
+POST {{host}}/api/v1/nav-menu
+Content-Type: application/json
+
+{
+  "name": "name1",
+  "actionType": 1,
+  "openPage": "news_list"
+}
