@@ -19,4 +19,8 @@ public class AppException extends RuntimeException {
     public static AppException actionFailError(String msg){
         return new AppException(AppErrorCode.ACTION_FAIL, msg);
     }
+
+    public static AppException paramError(String msg){
+        return new AppException(AppErrorCode.PARAM_ERROR, msg);
+    }
 }

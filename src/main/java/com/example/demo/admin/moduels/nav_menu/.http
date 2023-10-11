@@ -5,6 +5,7 @@ Content-Type: application/json
 
 {
   "name": "name1",
-  "actionType": 1,
-  "openPage": "news_list"
+  "actionType": 2,
+  "openPage": "news_list",
+  "position": null
 }

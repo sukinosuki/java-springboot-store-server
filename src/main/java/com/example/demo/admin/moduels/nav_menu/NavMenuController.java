@@ -18,7 +18,6 @@ public class NavMenuController {
 
     @PostMapping
     R add(@Valid @RequestBody @NotNull NavMenuForm.Add form) {
-
         log.info("添加 nav menu, form: ".concat(form.toString()));
 
         return R.ok(form);
