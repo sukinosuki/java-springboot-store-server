@@ -1,5 +1,5 @@
 # @name register
-POST {{host}}/api/v1/auth/register
+POST {{host}}/admin/api/v1/auth/register
 Content-Type: application/json
 
 {
@@ -16,7 +16,7 @@ Content-Type: application/json
 ###
 
 # @name login
-POST {{host}}/api/v1/auth/login
+POST {{host}}/admin/api/v1/auth/login
 Content-Type: application/json
 
 {
@@ -36,5 +36,5 @@ Content-Type: application/json
 
 ###
 # @name info
-GET {{host}}/api/v1/auth/info
+GET {{host}}/admin/api/v1/auth/info
 Authorization: {{auth_token}}

@@ -14,9 +14,9 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
 @RequestMapping("/admin/api/v1/auth")
-@RestController
+@RestController(value = "AuthController")
 @Slf4j
-public class AuthController {
+public class Controller {
 
     @Autowired
     AuthService authService;

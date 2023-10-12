@@ -5,5 +5,6 @@ import com.example.demo.model.NavMenu;
 import org.springframework.stereotype.Service;
 
 @Service
-public class NavMenuServiceImpl extends ServiceImpl<NavMenuMapper, NavMenu> implements NavMenuService {
+public class NavMenuDao extends ServiceImpl<NavMenuMapper, NavMenu> {
+
 }

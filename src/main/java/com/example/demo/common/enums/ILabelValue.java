@@ -4,4 +4,6 @@ public interface ILabelValue<T> {
     T getValue();
 
     String getLabel();
+
+    String getKey();
 }

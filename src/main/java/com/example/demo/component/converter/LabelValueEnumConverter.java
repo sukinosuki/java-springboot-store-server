@@ -16,7 +16,7 @@ public class LabelValueEnumConverter<T extends ILabelValue<String>> implements C
     public LabelValueEnumConverter(Class<T> enumType) {
 
         for (T x : enumType.getEnumConstants()) {
-            enumMap.put(x.getValue(), x);
+            enumMap.put(x.getKey(), x);
         }
 
         log.info(String.format("enumMap: %s", enumMap));
@@ -27,9 +27,9 @@ public class LabelValueEnumConverter<T extends ILabelValue<String>> implements C
         T t = enumMap.get(source);
 
         log.info(String.format("转换 LabelValue, %s", t));
-        if (t == null) {
-            throw AppException.actionFailError(String.format("enum转换失败, value: %s", source));
-        }
+//        if (t == null) {
+//            throw AppException.actionFailError(String.format("enum转换失败, value: %s", source));
+//        }
 
         return t;
     }

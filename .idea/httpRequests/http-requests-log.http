@@ -1,0 +1,650 @@
+GET http://127.0.0.1:8080/admin/api/v1/nav-menu?position=pc_home_banner&actionType=1&openPage=news_list&page=1&size=21
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-10-12T175838.200.json
+
+###
+
+DELETE http://127.0.0.1:8080/api/v1/nav-menu/1
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-10-12T175825.404.json
+
+###
+
+POST http://127.0.0.1:8080/admin/api/v1/auth/register
+Content-Type: application/json
+Content-Length: 51
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "username": "hanami2",
+  "password": "233233"
+}
+
+<> 2023-10-12T175812.200.json
+
+###
+
+GET http://127.0.0.1:8080/admin/api/v1/auth/info
+Authorization: {{auth_token}}
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-10-12T175750.200.json
+
+###
+
+GET http://127.0.0.1:8080/api/v1/auth/info
+Authorization: {{auth_token}}
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-10-12T175744.404.json
+
+###
+
+POST http://127.0.0.1:8080/admin/api/v1/auth/login
+Content-Type: application/json
+Content-Length: 51
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "username": "hanami2",
+  "password": "233233"
+}
+
+<> 2023-10-12T175736.200.json
+
+###
+
+PUT http://127.0.0.1:8080/admin/api/v1/nav-menu/1
+Content-Type: application/json
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-10-12T175633.200.json
+
+###
+
+PUT http://127.0.0.1:8080/admin/api/v1/nav-menu/1
+Content-Type: application/json
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-10-12T175628.200.json
+
+###
+
+DELETE http://127.0.0.1:8080/admin/api/v1/nav-menu/1
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-10-12T175521.200.json
+
+###
+
+DELETE http://127.0.0.1:8080/admin/api/v1/nav-menu/1
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-10-12T175459.200.json
+
+###
+
+DELETE http://127.0.0.1:8080/admin/api/v1/nav-menu/1
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-10-12T175450.200.json
+
+###
+
+DELETE http://127.0.0.1:8080/admin/api/v1/nav-menu/4
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-10-12T175441.200.json
+
+###
+
+DELETE http://127.0.0.1:8080/admin/api/v1/nav-menu/4
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-10-12T175425.200.json
+
+###
+
+DELETE http://127.0.0.1:8080/admin/api/v1/nav-menu/4
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-10-12T175403.200.json
+
+###
+
+DELETE http://127.0.0.1:8080/admin/api/v1/nav-menu/5
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-10-12T175352.200.json
+
+###
+
+GET http://127.0.0.1:8080/admin/api/v1/nav-menu?position=pc_home_banner&actionType=1&openPage=news_list&page=1&size=21
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-10-12T175346.200.json
+
+###
+
+POST http://127.0.0.1:8080/admin/api/v1/nav-menu
+Content-Type: application/json
+Content-Length: 99
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "name1",
+  "actionType": 1,
+  "openPage": "news_list",
+  "position": "pc_home_banner"
+}
+
+<> 2023-10-12T175344.200.json
+
+###
+
+POST http://127.0.0.1:8080/admin/api/v1/nav-menu
+Content-Type: application/json
+Content-Length: 99
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "name1",
+  "actionType": 1,
+  "openPage": "news_list",
+  "position": "pc_home_banner"
+}
+
+<> 2023-10-12T175342.200.json
+
+###
+
+POST http://127.0.0.1:8080/admin/api/v1/nav-menu
+Content-Type: application/json
+Content-Length: 99
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "name1",
+  "actionType": 1,
+  "openPage": "news_list",
+  "position": "pc_home_banner"
+}
+
+<> 2023-10-12T175341.200.json
+
+###
+
+POST http://127.0.0.1:8080/admin/api/v1/nav-menu
+Content-Type: application/json
+Content-Length: 99
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "name1",
+  "actionType": 1,
+  "openPage": "news_list",
+  "position": "pc_home_banner"
+}
+
+<> 2023-10-12T175338.200.json
+
+###
+
+GET http://127.0.0.1:8080/admin/api/v1/nav-menu?position=pc_home_banner&actionType=1&openPage=news_list&page=1&size=21
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-10-12T175203.200.json
+
+###
+
+GET http://127.0.0.1:8080/admin/api/v1/nav-menu?position=pc_home_banner&actionType=1&openPage=news_list&page=1&size=21
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-10-12T175131.200.json
+
+###
+
+POST http://127.0.0.1:8080/admin/api/v1/nav-menu
+Content-Type: application/json
+Content-Length: 99
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "name1",
+  "actionType": 1,
+  "openPage": "news_list",
+  "position": "pc_home_banner"
+}
+
+<> 2023-10-12T175123.200.json
+
+###
+
+POST http://127.0.0.1:8080/admin/api/v1/nav-menu
+Content-Type: application/json
+Content-Length: 99
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "name1",
+  "actionType": 1,
+  "openPage": "news_list",
+  "position": "pc_home_banner"
+}
+
+<> 2023-10-12T174636.200.json
+
+###
+
+POST http://127.0.0.1:8080/admin/api/v1/nav-menu
+Content-Type: application/json
+Content-Length: 99
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "name1",
+  "actionType": 1,
+  "openPage": "news_list",
+  "position": "pc_home_banner"
+}
+
+<> 2023-10-12T174527.200.json
+
+###
+
+POST http://127.0.0.1:8080/admin/api/v1/nav-menu
+Content-Type: application/json
+Content-Length: 99
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "name1",
+  "actionType": 1,
+  "openPage": "news_list",
+  "position": "pc_home_banner"
+}
+
+<> 2023-10-12T173557.200.json
+
+###
+
+POST http://127.0.0.1:8080/admin/api/v1/nav-menu
+Content-Type: application/json
+Content-Length: 99
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "name1",
+  "actionType": 1,
+  "openPage": "news_list",
+  "position": "pc_home_banner"
+}
+
+<> 2023-10-12T173516.200.json
+
+###
+
+POST http://127.0.0.1:8080/admin/api/v1/nav-menu
+Content-Type: application/json
+Content-Length: 99
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "name1",
+  "actionType": 1,
+  "openPage": "news_list",
+  "position": "pc_home_banner"
+}
+
+<> 2023-10-12T173333.200.json
+
+###
+
+GET http://127.0.0.1:8080/admin/api/v1/nav-menu?position=pc_home_banner&actionType=1&openPage=news_list&page=1&size=21
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-10-12T173317.200.json
+
+###
+
+GET http://127.0.0.1:8080/admin/api/v1/nav-menu?position=pc_home_banner&actionType=1&openPage=news_list&page=1&size=21
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-10-12T172958.200.json
+
+###
+
+POST http://127.0.0.1:8080/admin/api/v1/nav-menu
+Content-Type: application/json
+Content-Length: 99
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "name1",
+  "actionType": 1,
+  "openPage": "news_list",
+  "position": "pc_home_banner"
+}
+
+<> 2023-10-12T172952.200.json
+
+###
+
+POST http://127.0.0.1:8080/admin/api/v1/nav-menu
+Content-Type: application/json
+Content-Length: 99
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "name1",
+  "actionType": 1,
+  "openPage": "news_list",
+  "position": "pc_home_banner"
+}
+
+<> 2023-10-12T172651.200.json
+
+###
+
+POST http://127.0.0.1:8080/admin/api/v1/nav-menu
+Content-Type: application/json
+Content-Length: 99
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "name1",
+  "actionType": 1,
+  "openPage": "news_list",
+  "position": "pc_home_banner"
+}
+
+<> 2023-10-12T172534.200.json
+
+###
+
+POST http://127.0.0.1:8080/admin/api/v1/nav-menu
+Content-Type: application/json
+Content-Length: 99
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "name1",
+  "actionType": 1,
+  "openPage": "news_list",
+  "position": "pc_home_banner"
+}
+
+<> 2023-10-12T172440.200.json
+
+###
+
+POST http://127.0.0.1:8080/admin/api/v1/nav-menu
+Content-Type: application/json
+Content-Length: 99
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "name1",
+  "actionType": 1,
+  "openPage": "news_list",
+  "position": "pc_home_banner"
+}
+
+<> 2023-10-12T172053.200.json
+
+###
+
+POST http://127.0.0.1:8080/admin/api/v1/nav-menu
+Content-Type: application/json
+Content-Length: 100
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "name1",
+  "actionType": 1,
+  "openPage": "news_list",
+  "position": "pc_home_banner",
+}
+
+<> 2023-10-12T172046.200.json
+
+###
+
+POST http://127.0.0.1:8080/admin/api/v1/nav-menu
+Content-Type: application/json
+Content-Length: 101
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "name1",
+  "action_type": 1,
+  "open_page": "news_list",
+  "position": "pc_home_banner"
+}
+
+<> 2023-10-12T172029.200.json
+
+###
+
+POST http://127.0.0.1:8080/admin/api/v1/nav-menu
+Content-Type: application/json
+Content-Length: 101
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "name1",
+  "action_type": 1,
+  "open_page": "news_list",
+  "position": "pc_home_banner"
+}
+
+<> 2023-10-12T115751.200.json
+
+###
+
+POST http://127.0.0.1:8080/admin/api/v1/nav-menu
+Content-Type: application/json
+Content-Length: 101
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "name1",
+  "action_type": 0,
+  "open_page": "news_list",
+  "position": "pc_home_banner"
+}
+
+<> 2023-10-12T115743.200.json
+
+###
+
+POST http://127.0.0.1:8080/admin/api/v1/nav-menu
+Content-Type: application/json
+Content-Length: 99
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "name1",
+  "actionType": 0,
+  "openPage": "news_list",
+  "position": "pc_home_banner"
+}
+
+<> 2023-10-12T115730.200.json
+
+###
+
+GET http://127.0.0.1:8080/admin/api/v1/nav-menu?position=pc_home_banner&actionType=1&openPage=news_list&page=1&size=21
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-10-12T115717.200.json
+
+###
+
+GET http://127.0.0.1:8080/admin/api/v1/nav-menu?position=pc_home_banner&actionType=1&openPage=news_list&page=1&size=21aa
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-10-12T115709.200.json
+
+###
+
+GET http://127.0.0.1:8080/admin/api/v1/nav-menu?position=pc_home_banner&actionType=1&openPage=news_list&page=1&size=21aa
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-10-12T114153.200.json
+
+###
+
+GET http://127.0.0.1:8080/admin/api/v1/nav-menu?position=pc_home_banner&actionType=1&openPage=news_list&page=1
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-10-12T114146.200.json
+
+###
+
+GET http://127.0.0.1:8080/admin/api/v1/nav-menu?position=pc_home_banner&actionType=1&openPage=news_list&page=aaa
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-10-12T114037.200.json
+
+###
+
+GET http://127.0.0.1:8080/admin/api/v1/nav-menu?position=pc_home_banner&actionType=1&openPage=news_list&page=true
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-10-12T114025.200.json
+
+###
+
+GET http://127.0.0.1:8080/admin/api/v1/nav-menu?position=pc_home_banner&actionType=1&openPage=news_list&page=true
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-10-12T114012.200.json
+
+###
+
+GET http://127.0.0.1:8080/admin/api/v1/nav-menu?position=pc_home_banner&actionType=1&openPage=news_list&page=true
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-10-12T113744.200.json
+
+###
+
+GET http://127.0.0.1:8080/admin/api/v1/nav-menu?position=pc_home_banner&actionType=1&openPage=news_list&page=true
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-10-12T113518.200.json
+
+###
+
+GET http://127.0.0.1:8080/admin/api/v1/nav-menu?position=pc_home_banner&actionType=1&openPage=news_list
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-10-12T113511.200.json
+
+###
+

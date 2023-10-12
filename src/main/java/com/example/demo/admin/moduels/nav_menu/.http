@@ -5,7 +5,21 @@ Content-Type: application/json
 
 {
   "name": "name1",
-  "actionType": 2,
+  "actionType": 1,
   "openPage": "news_list",
-  "position": null
+  "position": "pc_home_banner"
 }
+
+###
+# @name get
+GET {{host}}/admin/api/v1/nav-menu?position=pc_home_banner&actionType=1&openPage=news_list&page=1&size=21
+
+###
+
+#@name delete
+DELETE {{host}}/admin/api/v1/nav-menu/1
+
+###
+#@name update
+PUT {{host}}/admin/api/v1/nav-menu/1
+Content-Type: application/json

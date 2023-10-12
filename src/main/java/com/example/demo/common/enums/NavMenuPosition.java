@@ -1,5 +1,6 @@
 package com.example.demo.common.enums;
 
+import com.baomidou.mybatisplus.annotation.EnumValue;
 import com.fasterxml.jackson.annotation.JsonValue;
 import lombok.AllArgsConstructor;
 
@@ -9,6 +10,7 @@ public enum NavMenuPosition implements ILabelValue<String> {
     PC_HOME_BANNER("pc_home_banner", "pc:首页:banner");
 
     @JsonValue
+    @EnumValue
     public final String value;
     public final String label;
 
@@ -20,5 +22,10 @@ public enum NavMenuPosition implements ILabelValue<String> {
     @Override
     public String getLabel() {
         return this.label;
+    }
+
+    @Override
+    public String getKey() {
+        return this.value;
     }
 }

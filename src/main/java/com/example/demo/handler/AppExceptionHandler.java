@@ -9,8 +9,10 @@ import org.springframework.dao.DuplicateKeyException;
 import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.web.HttpRequestMethodNotSupportedException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
+import org.springframework.web.bind.MissingServletRequestParameterException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
 
 import java.sql.SQLIntegrityConstraintViolationException;
 
@@ -72,6 +74,7 @@ public class AppExceptionHandler {
         return R.paramError(msg, e.getMessage());
     }
 
+    // 请求方法不支持异常
     @ExceptionHandler(HttpRequestMethodNotSupportedException.class)
     R handleHttpRequestMethodNotSupportedException(HttpRequestMethodNotSupportedException e) {
         log.error("请求方法不支持, msg: ".concat(e.getMessage()));
@@ -79,10 +82,37 @@ public class AppExceptionHandler {
         return R.recordNotFound();
     }
 
+    // 自定义异常
     @ExceptionHandler(AppException.class)
     R handleAppException(AppException e) {
         log.warn("捕获自定义异常: msg: ".concat(NullUtil.null2String(e.message)));
 
         return R.appException(e);
+    }
+
+    // get 参数异常
+    @ExceptionHandler(MissingServletRequestParameterException.class)
+    R handleMissingServletRequestParameterException(MissingServletRequestParameterException e) {
+        log.warn(String.format("参数错误: type: %s, e: %s", e.getClass().getName(), e.getMessage()));
+
+        e.getParameterName();
+        e.getParameterType();
+
+        String msg = "参数错误: 字段 [%s] 期望类型 [%s]";
+        if (e.getMessage().contains("is not present")) {
+            msg = "参数错误: 字段 [%s] 不能为空";
+        }
+
+        return R.paramError(String.format(msg, e.getParameterName(), e.getParameterType()), e.getMessage());
+    }
+
+    @ExceptionHandler(MethodArgumentTypeMismatchException.class)
+    R handleMethodArgumentTypeMismatchException(MethodArgumentTypeMismatchException e) {
+
+        log.warn(String.format("参数错误: e: %s ", e.getName()));
+
+        String msg = String.format("参数错误: 字段[%s]值为[%s], 期望类型: [%s]", e.getName(), e.getValue(), e.getRequiredType().getName());
+
+        return R.paramError(msg, e.getMessage());
     }
 }
