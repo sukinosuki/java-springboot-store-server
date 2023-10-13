@@ -14,6 +14,7 @@ public class LabelValueEnumConverterFactory implements ConverterFactory<String, 
     public <T extends ILabelValue<String>> Converter<String, T> getConverter(Class<T> targetType) {
 
         Converter<?, ?> converter = CONVERTERS.get(targetType);
+
         if (converter == null) {
             converter = new LabelValueEnumConverter<>(targetType);
             CONVERTERS.put(targetType, converter);

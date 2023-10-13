@@ -1,6 +1,5 @@
 package com.example.demo.component.converter;
 
-import com.example.demo.common.AppException;
 import com.example.demo.common.enums.ILabelValue;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.convert.converter.Converter;

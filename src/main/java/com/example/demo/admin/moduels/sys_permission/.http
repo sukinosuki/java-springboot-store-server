@@ -1,0 +1,38 @@
+#@name add
+POST {{host}}/admin/api/v1/sys-permission
+Content-Type: application/json
+
+{
+  "name": "角色",
+  "type": 1,
+  "description": "角色1212"
+}
+
+###
+
+#@name add
+POST {{host}}/admin/api/v1/sys-permission
+Content-Type: application/json
+
+{
+  "name": "更新",
+  "type": 2,
+  "description": "description 1212",
+  "method": "PUT",
+  "pid": 2,
+  "url": "/admin/api/v1/post"
+}
+
+###
+
+# @name update
+PUT {{host}}/admin/api/v1/sys-permission/9
+Content-Type: application/json
+
+{
+  "name": "更新",
+  "type": 2,
+  "method": "PUT",
+  "pid": 2,
+  "url": "/admin/api/v1/post/:id"
+}

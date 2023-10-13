@@ -20,13 +20,14 @@ import java.util.*;
 public class Controller {
 
     @Autowired
-    Service service;
+    IService IService;
 
     @PostMapping
     R add(@Valid @RequestBody @NotNull NavMenuForm.Add form) {
         log.info("添加 nav menu, form: ".concat(form.toString()));
 
-        service.add(form);
+        IService.add(form);
+
         return R.ok();
     }
 
@@ -35,7 +36,7 @@ public class Controller {
 
         form.id = id;
 
-        service.update(form);
+        IService.update(form);
 
         return R.ok();
     }
@@ -55,14 +56,14 @@ public class Controller {
         hashMap.put("page", page);
         hashMap.put("size", size);
 
-        List<NavMenu> list = service.all();
+        List<NavMenu> list = IService.all();
 
         return R.ok(list);
     }
 
     @DeleteMapping("/{id}")
     R delete(@PathVariable Long id) {
-        service.delete(List.of(id));
+        IService.delete(List.of(id));
 
         return R.ok();
     }

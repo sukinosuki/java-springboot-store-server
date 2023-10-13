@@ -1,492 +1,464 @@
-GET http://127.0.0.1:8080/admin/api/v1/nav-menu?position=pc_home_banner&actionType=1&openPage=news_list&page=1&size=21
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-10-12T175838.200.json
-
-###
-
-DELETE http://127.0.0.1:8080/api/v1/nav-menu/1
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-10-12T175825.404.json
-
-###
-
-POST http://127.0.0.1:8080/admin/api/v1/auth/register
+PUT http://127.0.0.1:8080/admin/api/v1/sys-permission/9
 Content-Type: application/json
-Content-Length: 51
+Content-Length: 101
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
-  "username": "hanami2",
-  "password": "233233"
+  "name": "更新",
+  "type": 2,
+  "method": "PUT",
+  "pid": 2,
+  "url": "/admin/api/v1/post/:id"
 }
 
-<> 2023-10-12T175812.200.json
+<> 2023-10-13T180733.200.json
 
 ###
 
-GET http://127.0.0.1:8080/admin/api/v1/auth/info
-Authorization: {{auth_token}}
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-10-12T175750.200.json
-
-###
-
-GET http://127.0.0.1:8080/api/v1/auth/info
-Authorization: {{auth_token}}
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-10-12T175744.404.json
-
-###
-
-POST http://127.0.0.1:8080/admin/api/v1/auth/login
+PUT http://127.0.0.1:8080/admin/api/v1/sys-permission/9
 Content-Type: application/json
-Content-Length: 51
+Content-Length: 104
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
-  "username": "hanami2",
-  "password": "233233"
+  "name": "更新",
+  "type": 2,
+  "method": "DELETE",
+  "pid": 2,
+  "url": "/admin/api/v1/post/:id"
 }
 
-<> 2023-10-12T175736.200.json
+<> 2023-10-13T180702.200.json
 
 ###
 
-PUT http://127.0.0.1:8080/admin/api/v1/nav-menu/1
+PUT http://127.0.0.1:8080/admin/api/v1/sys-permission/8
 Content-Type: application/json
+Content-Length: 104
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "删除",
+  "type": 2,
+  "method": "DELETE",
+  "pid": 2,
+  "url": "/admin/api/v1/post/:id"
+}
+
+<> 2023-10-13T180652.200.json
+
+###
+
+PUT http://127.0.0.1:8080/admin/api/v1/sys-permission/8
+Content-Type: application/json
+Content-Length: 104
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "更新",
+  "type": 2,
+  "method": "DELETE",
+  "pid": 2,
+  "url": "/admin/api/v1/post/:id"
+}
+
+<> 2023-10-13T180640.200.json
+
+###
+
+PUT http://127.0.0.1:8080/admin/api/v1/sys-permission/8
+Content-Type: application/json
+Content-Length: 104
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "删除",
+  "type": 2,
+  "method": "DELETE",
+  "pid": 2,
+  "url": "/admin/api/v1/post/:id"
+}
+
+<> 2023-10-13T180623.200.json
+
+###
+
+PUT http://127.0.0.1:8080/admin/api/v1/sys-permission/8
+Content-Type: application/json
+Content-Length: 69
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "删除",
+  "type": 2,
+  "method": "DELETE",
+  "pid": 2
+}
+
+<> 2023-10-13T180503.200.json
+
+###
+
+PUT http://127.0.0.1:8080/admin/api/v1/sys-permission/8
+Content-Type: application/json
+Content-Length: 57
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "删除",
+  "type": 2,
+  "method": "DELETE"
+}
+
+<> 2023-10-13T180450.200.json
+
+###
+
+PUT http://127.0.0.1:8080/admin/api/v1/sys-permission/8
+Content-Type: application/json
+Content-Length: 35
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "删除",
+  "type": 2
+}
+
+<> 2023-10-13T180428.200.json
+
+###
+
+PUT http://127.0.0.1:8080/admin/api/v1/sys-permission/8
+Content-Type: application/json
+Content-Length: 35
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "删除",
+  "type": 2
+}
+
+<> 2023-10-13T180048.200.json
+
+###
+
+PUT http://127.0.0.1:8080/admin/api/v1/sys-permission/8
+Content-Type: application/json
+Content-Length: 35
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "删除",
+  "type": 2
+}
+
+<> 2023-10-13T175954.200.json
+
+###
+
+PUT http://127.0.0.1:8080/admin/api/v1/sys-permission/8
+Content-Type: application/json
+Content-Length: 40
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "删除",
+  "type": "MENU"
+}
+
+<> 2023-10-13T175947.200.json
+
+###
+
+PUT http://127.0.0.1:8080/admin/api/v1/sys-permission/8
+Content-Type: application/json
+Content-Length: 22
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "删除"
+}
+
+<> 2023-10-13T175928.200.json
+
+###
+
+PUT http://127.0.0.1:8080/admin/api/v1/sys-permission/8
+Content-Type: application/json
+Content-Length: 6
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+
+}
+
+<> 2023-10-13T175916.200.json
+
+###
+
+PUT http://127.0.0.1:8080/admin/api/v1/sys-permission/8
 Content-Length: 0
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
-<> 2023-10-12T175633.200.json
+<> 2023-10-13T175909.200.json
 
 ###
 
-PUT http://127.0.0.1:8080/admin/api/v1/nav-menu/1
+POST http://127.0.0.1:8080/admin/api/v1/sys-permission
 Content-Type: application/json
-Content-Length: 0
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-10-12T175628.200.json
-
-###
-
-DELETE http://127.0.0.1:8080/admin/api/v1/nav-menu/1
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-10-12T175521.200.json
-
-###
-
-DELETE http://127.0.0.1:8080/admin/api/v1/nav-menu/1
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-10-12T175459.200.json
-
-###
-
-DELETE http://127.0.0.1:8080/admin/api/v1/nav-menu/1
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-10-12T175450.200.json
-
-###
-
-DELETE http://127.0.0.1:8080/admin/api/v1/nav-menu/4
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-10-12T175441.200.json
-
-###
-
-DELETE http://127.0.0.1:8080/admin/api/v1/nav-menu/4
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-10-12T175425.200.json
-
-###
-
-DELETE http://127.0.0.1:8080/admin/api/v1/nav-menu/4
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-10-12T175403.200.json
-
-###
-
-DELETE http://127.0.0.1:8080/admin/api/v1/nav-menu/5
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-10-12T175352.200.json
-
-###
-
-GET http://127.0.0.1:8080/admin/api/v1/nav-menu?position=pc_home_banner&actionType=1&openPage=news_list&page=1&size=21
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-10-12T175346.200.json
-
-###
-
-POST http://127.0.0.1:8080/admin/api/v1/nav-menu
-Content-Type: application/json
-Content-Length: 99
+Content-Length: 134
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
-  "name": "name1",
-  "actionType": 1,
-  "openPage": "news_list",
-  "position": "pc_home_banner"
+  "name": "更新",
+  "type": 2,
+  "description": "description 1212",
+  "method": "PUT",
+  "pid": 2,
+  "url": "/admin/api/v1/post"
 }
 
-<> 2023-10-12T175344.200.json
+<> 2023-10-13T175740.200.json
 
 ###
 
-POST http://127.0.0.1:8080/admin/api/v1/nav-menu
+POST http://127.0.0.1:8080/admin/api/v1/sys-permission
 Content-Type: application/json
-Content-Length: 99
+Content-Length: 137
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
-  "name": "name1",
-  "actionType": 1,
-  "openPage": "news_list",
-  "position": "pc_home_banner"
+  "name": "删除",
+  "type": 2,
+  "description": "description 1212",
+  "method": "DELETE",
+  "pid": 2,
+  "url": "/admin/api/v1/post"
 }
 
-<> 2023-10-12T175342.200.json
+<> 2023-10-13T175730.200.json
 
 ###
 
-POST http://127.0.0.1:8080/admin/api/v1/nav-menu
+POST http://127.0.0.1:8080/admin/api/v1/sys-permission
 Content-Type: application/json
-Content-Length: 99
+Content-Length: 129
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
-  "name": "name1",
-  "actionType": 1,
-  "openPage": "news_list",
-  "position": "pc_home_banner"
+  "name": "新增",
+  "type": 2,
+  "description": "列表1212",
+  "method": "POST",
+  "pid": 2,
+  "url": "/admin/api/v1/post"
 }
 
-<> 2023-10-12T175341.200.json
+<> 2023-10-13T175647.200.json
 
 ###
 
-POST http://127.0.0.1:8080/admin/api/v1/nav-menu
+POST http://127.0.0.1:8080/admin/api/v1/sys-permission
 Content-Type: application/json
-Content-Length: 99
+Content-Length: 129
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
-  "name": "name1",
-  "actionType": 1,
-  "openPage": "news_list",
-  "position": "pc_home_banner"
+  "name": "新增",
+  "type": 2,
+  "description": "列表1212",
+  "method": "POST",
+  "pid": 2,
+  "url": "/admin/api/v1/post"
 }
 
-<> 2023-10-12T175338.200.json
+<> 2023-10-13T175646.200.json
 
 ###
 
-GET http://127.0.0.1:8080/admin/api/v1/nav-menu?position=pc_home_banner&actionType=1&openPage=news_list&page=1&size=21
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-10-12T175203.200.json
-
-###
-
-GET http://127.0.0.1:8080/admin/api/v1/nav-menu?position=pc_home_banner&actionType=1&openPage=news_list&page=1&size=21
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-10-12T175131.200.json
-
-###
-
-POST http://127.0.0.1:8080/admin/api/v1/nav-menu
+POST http://127.0.0.1:8080/admin/api/v1/sys-permission
 Content-Type: application/json
-Content-Length: 99
+Content-Length: 128
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
-  "name": "name1",
-  "actionType": 1,
-  "openPage": "news_list",
-  "position": "pc_home_banner"
+  "name": "新增",
+  "type": 2,
+  "description": "列表1212",
+  "method": "GET",
+  "pid": 2,
+  "url": "/admin/api/v1/post"
 }
 
-<> 2023-10-12T175123.200.json
+<> 2023-10-13T175639.200.json
 
 ###
 
-POST http://127.0.0.1:8080/admin/api/v1/nav-menu
+POST http://127.0.0.1:8080/admin/api/v1/sys-permission
 Content-Type: application/json
-Content-Length: 99
+Content-Length: 128
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
-  "name": "name1",
-  "actionType": 1,
-  "openPage": "news_list",
-  "position": "pc_home_banner"
+  "name": "列表",
+  "type": 2,
+  "description": "列表1212",
+  "method": "GET",
+  "pid": 2,
+  "url": "/admin/api/v1/post"
 }
 
-<> 2023-10-12T174636.200.json
+<> 2023-10-13T175554.200.json
 
 ###
 
-POST http://127.0.0.1:8080/admin/api/v1/nav-menu
+POST http://127.0.0.1:8080/admin/api/v1/sys-permission
 Content-Type: application/json
-Content-Length: 99
+Content-Length: 97
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
-  "name": "name1",
-  "actionType": 1,
-  "openPage": "news_list",
-  "position": "pc_home_banner"
+  "name": "列表",
+  "type": 2,
+  "description": "列表1212",
+  "method": "GET",
+  "pid": 2
 }
 
-<> 2023-10-12T174527.200.json
+<> 2023-10-13T175527.200.json
 
 ###
 
-POST http://127.0.0.1:8080/admin/api/v1/nav-menu
+POST http://127.0.0.1:8080/admin/api/v1/sys-permission
 Content-Type: application/json
-Content-Length: 99
+Content-Length: 85
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
-  "name": "name1",
-  "actionType": 1,
-  "openPage": "news_list",
-  "position": "pc_home_banner"
+  "name": "列表",
+  "type": 2,
+  "description": "列表1212",
+  "method": "GET"
 }
 
-<> 2023-10-12T173557.200.json
+<> 2023-10-13T175518.200.json
 
 ###
 
-POST http://127.0.0.1:8080/admin/api/v1/nav-menu
+POST http://127.0.0.1:8080/admin/api/v1/sys-permission
 Content-Type: application/json
-Content-Length: 99
+Content-Length: 86
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
-  "name": "name1",
-  "actionType": 1,
-  "openPage": "news_list",
-  "position": "pc_home_banner"
+  "name": "列表",
+  "type": 2,
+  "description": "列表1212",
+  "method": "GET2"
 }
 
-<> 2023-10-12T173516.200.json
+<> 2023-10-13T175433.200.json
 
 ###
 
-POST http://127.0.0.1:8080/admin/api/v1/nav-menu
+POST http://127.0.0.1:8080/admin/api/v1/sys-permission
 Content-Type: application/json
-Content-Length: 99
+Content-Length: 66
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
-  "name": "name1",
-  "actionType": 1,
-  "openPage": "news_list",
-  "position": "pc_home_banner"
+  "name": "列表",
+  "type": 2,
+  "description": "列表1212"
 }
 
-<> 2023-10-12T173333.200.json
+<> 2023-10-13T175402.200.json
 
 ###
 
-GET http://127.0.0.1:8080/admin/api/v1/nav-menu?position=pc_home_banner&actionType=1&openPage=news_list&page=1&size=21
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-10-12T173317.200.json
-
-###
-
-GET http://127.0.0.1:8080/admin/api/v1/nav-menu?position=pc_home_banner&actionType=1&openPage=news_list&page=1&size=21
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-10-12T172958.200.json
-
-###
-
-POST http://127.0.0.1:8080/admin/api/v1/nav-menu
+POST http://127.0.0.1:8080/admin/api/v1/sys-permission
 Content-Type: application/json
-Content-Length: 99
+Content-Length: 66
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
-  "name": "name1",
-  "actionType": 1,
-  "openPage": "news_list",
-  "position": "pc_home_banner"
+  "name": "角色",
+  "type": 1,
+  "description": "角色1212"
 }
 
-<> 2023-10-12T172952.200.json
+<> 2023-10-13T175333.200.json
 
 ###
 
-POST http://127.0.0.1:8080/admin/api/v1/nav-menu
+POST http://127.0.0.1:8080/admin/api/v1/sys-permission
 Content-Type: application/json
-Content-Length: 99
+Content-Length: 60
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
-  "name": "name1",
-  "actionType": 1,
-  "openPage": "news_list",
-  "position": "pc_home_banner"
+  "name": "文章",
+  "type": 1,
+  "description": "1212"
 }
 
-<> 2023-10-12T172651.200.json
+<> 2023-10-13T175324.200.json
 
 ###
 
-POST http://127.0.0.1:8080/admin/api/v1/nav-menu
-Content-Type: application/json
-Content-Length: 99
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "name": "name1",
-  "actionType": 1,
-  "openPage": "news_list",
-  "position": "pc_home_banner"
-}
-
-<> 2023-10-12T172534.200.json
-
-###
-
-POST http://127.0.0.1:8080/admin/api/v1/nav-menu
-Content-Type: application/json
-Content-Length: 99
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "name": "name1",
-  "actionType": 1,
-  "openPage": "news_list",
-  "position": "pc_home_banner"
-}
-
-<> 2023-10-12T172440.200.json
-
-###
-
-POST http://127.0.0.1:8080/admin/api/v1/nav-menu
-Content-Type: application/json
-Content-Length: 99
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "name": "name1",
-  "actionType": 1,
-  "openPage": "news_list",
-  "position": "pc_home_banner"
-}
-
-<> 2023-10-12T172053.200.json
-
-###
-
-POST http://127.0.0.1:8080/admin/api/v1/nav-menu
-Content-Type: application/json
-Content-Length: 100
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "name": "name1",
-  "actionType": 1,
-  "openPage": "news_list",
-  "position": "pc_home_banner",
-}
-
-<> 2023-10-12T172046.200.json
-
-###
-
-POST http://127.0.0.1:8080/admin/api/v1/nav-menu
+POST http://127.0.0.1:8080/admin/api/v1/sys-permission
 Content-Type: application/json
 Content-Length: 101
 Connection: Keep-Alive
@@ -494,17 +466,17 @@ User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
-  "name": "name1",
-  "action_type": 1,
-  "open_page": "news_list",
-  "position": "pc_home_banner"
+  "name": "权限节点",
+  "type": 1,
+  "url": "/admin/api/v1/sys-permission",
+  "method": "GET"
 }
 
-<> 2023-10-12T172029.200.json
+<> 2023-10-13T172422.200.json
 
 ###
 
-POST http://127.0.0.1:8080/admin/api/v1/nav-menu
+POST http://127.0.0.1:8080/admin/api/v1/sys-permission
 Content-Type: application/json
 Content-Length: 101
 Connection: Keep-Alive
@@ -512,17 +484,17 @@ User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
-  "name": "name1",
-  "action_type": 1,
-  "open_page": "news_list",
-  "position": "pc_home_banner"
+  "name": "权限节点",
+  "type": 1,
+  "url": "/admin/api/v1/sys-permission",
+  "method": "GET"
 }
 
-<> 2023-10-12T115751.200.json
+<> 2023-10-13T172351.200.json
 
 ###
 
-POST http://127.0.0.1:8080/admin/api/v1/nav-menu
+POST http://127.0.0.1:8080/admin/api/v1/sys-permission
 Content-Type: application/json
 Content-Length: 101
 Connection: Keep-Alive
@@ -530,31 +502,197 @@ User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
-  "name": "name1",
-  "action_type": 0,
-  "open_page": "news_list",
-  "position": "pc_home_banner"
+  "name": "权限节点",
+  "type": 1,
+  "url": "/admin/api/v1/sys-permission",
+  "method": "GET"
 }
 
-<> 2023-10-12T115743.200.json
+<> 2023-10-13T172246.200.json
 
 ###
 
-POST http://127.0.0.1:8080/admin/api/v1/nav-menu
+POST http://127.0.0.1:8080/admin/api/v1/sys-permission
 Content-Type: application/json
-Content-Length: 99
+Content-Length: 101
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
-  "name": "name1",
-  "actionType": 0,
-  "openPage": "news_list",
-  "position": "pc_home_banner"
+  "name": "权限节点",
+  "type": 1,
+  "url": "/admin/api/v1/sys-permission",
+  "method": "GET"
 }
 
-<> 2023-10-12T115730.200.json
+<> 2023-10-13T172153.200.json
+
+###
+
+POST http://127.0.0.1:8080/admin/api/v1/sys-permission
+Content-Type: application/json
+Content-Length: 101
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "权限节点",
+  "type": 1,
+  "url": "/admin/api/v1/sys-permission",
+  "method": "GET"
+}
+
+<> 2023-10-13T172053.200.json
+
+###
+
+POST http://127.0.0.1:8080/admin/api/v1/sys-permission
+Content-Type: application/json
+Content-Length: 101
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "权限节点",
+  "type": 1,
+  "url": "/admin/api/v1/sys-permission",
+  "method": "GET"
+}
+
+<> 2023-10-13T171314.200.json
+
+###
+
+POST http://127.0.0.1:8080/admin/api/v1/sys-permission
+Content-Type: application/json
+Content-Length: 104
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "权限节点",
+  "type": 1,
+  "url": "/admin/api/v1/sys-permission",
+  "method": "GET"
+
+}
+
+<> 2023-10-13T171209.200.json
+
+###
+
+POST http://127.0.0.1:8080/admin/api/v1/sys-permission
+Content-Type: application/json
+Content-Length: 96
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "列表",
+  "type": 2,
+  "url": "/admin/api/v1/sys-permission",
+  "method": "GET"
+
+}
+
+<> 2023-10-13T171150.200.json
+
+###
+
+POST http://127.0.0.1:8080/admin/api/v1/sys-permission
+Content-Type: application/json
+Content-Length: 96
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "列表",
+  "type": 2,
+  "url": "/admin/api/v1/sys-permission",
+  "method": "GET"
+
+}
+
+<> 2023-10-13T170513.200.json
+
+###
+
+POST http://127.0.0.1:8080/admin/api/v1/sys-permission
+Content-Type: application/json
+Content-Length: 96
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "列表",
+  "type": 2,
+  "url": "/admin/api/v1/sys-permission",
+  "method": "get"
+
+}
+
+<> 2023-10-13T170506.200.json
+
+###
+
+POST http://127.0.0.1:8080/admin/api/v1/sys-permission
+Content-Type: application/json
+Content-Length: 93
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "列表",
+  "type": 2,
+  "url": "/admin/api/v1/sys-permission",
+  "method": ""
+
+}
+
+<> 2023-10-13T170457.200.json
+
+###
+
+POST http://127.0.0.1:8080/admin/api/v1/sys-permission
+Content-Type: application/json
+Content-Length: 77
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "列表",
+  "type": 2,
+  "url": "/admin/api/v1/sys-permission"
+
+}
+
+<> 2023-10-13T170450.200.json
+
+###
+
+POST http://127.0.0.1:8080/admin/api/v1/sys-permission
+Content-Type: application/json
+Content-Length: 36
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "列表",
+  "type": 2
+
+}
+
+<> 2023-10-13T170426.200.json
 
 ###
 
@@ -563,88 +701,161 @@ Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
-<> 2023-10-12T115717.200.json
+<> 2023-10-13T170304.200.json
 
 ###
 
-GET http://127.0.0.1:8080/admin/api/v1/nav-menu?position=pc_home_banner&actionType=1&openPage=news_list&page=1&size=21aa
+GET http://127.0.0.1:8080/admin/api/v1/nav-menu?position=pc_home_banner&actionType=1&openPage=news_list&page=1&size=21
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
-<> 2023-10-12T115709.200.json
+<> 2023-10-13T170222.200.json
 
 ###
 
-GET http://127.0.0.1:8080/admin/api/v1/nav-menu?position=pc_home_banner&actionType=1&openPage=news_list&page=1&size=21aa
+GET http://127.0.0.1:8080/admin/api/v1/nav-menu?position=pc_home_banner&actionType=1&openPage=news_list&page=1&size=21
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
-<> 2023-10-12T114153.200.json
+<> 2023-10-13T170137.200.json
 
 ###
 
-GET http://127.0.0.1:8080/admin/api/v1/nav-menu?position=pc_home_banner&actionType=1&openPage=news_list&page=1
+POST http://127.0.0.1:8080/admin/api/v1/sys-permission
+Content-Type: application/json
+Content-Length: 36
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
-<> 2023-10-12T114146.200.json
+{
+  "name": "列表",
+  "type": 2
+
+}
+
+<> 2023-10-13T170014.200.json
 
 ###
 
-GET http://127.0.0.1:8080/admin/api/v1/nav-menu?position=pc_home_banner&actionType=1&openPage=news_list&page=aaa
+POST http://127.0.0.1:8080/admin/api/v1/sys-permission
+Content-Type: application/json
+Content-Length: 36
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
-<> 2023-10-12T114037.200.json
+{
+  "name": "列表",
+  "type": 2
+
+}
+
+<> 2023-10-13T165936.200.json
 
 ###
 
-GET http://127.0.0.1:8080/admin/api/v1/nav-menu?position=pc_home_banner&actionType=1&openPage=news_list&page=true
+POST http://127.0.0.1:8080/admin/api/v1/sys-permission
+Content-Type: application/json
+Content-Length: 36
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
-<> 2023-10-12T114025.200.json
+{
+  "name": "列表",
+  "type": 2
+
+}
+
+<> 2023-10-13T165850.200.json
 
 ###
 
-GET http://127.0.0.1:8080/admin/api/v1/nav-menu?position=pc_home_banner&actionType=1&openPage=news_list&page=true
+POST http://127.0.0.1:8080/admin/api/v1/sys-permission
+Content-Type: application/json
+Content-Length: 36
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
-<> 2023-10-12T114012.200.json
+{
+  "name": "列表",
+  "type": 2
+
+}
+
+<> 2023-10-13T165824.200.json
 
 ###
 
-GET http://127.0.0.1:8080/admin/api/v1/nav-menu?position=pc_home_banner&actionType=1&openPage=news_list&page=true
+POST http://127.0.0.1:8080/admin/api/v1/sys-permission
+Content-Type: application/json
+Content-Length: 36
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
-<> 2023-10-12T113744.200.json
+{
+  "name": "列表",
+  "type": 2
+
+}
+
+<> 2023-10-13T165651.200.json
 
 ###
 
-GET http://127.0.0.1:8080/admin/api/v1/nav-menu?position=pc_home_banner&actionType=1&openPage=news_list&page=true
+POST http://127.0.0.1:8080/admin/api/v1/sys-permission
+Content-Type: application/json
+Content-Length: 37
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
-<> 2023-10-12T113518.200.json
+{
+  "name": "列表",
+  "type": 22
+
+}
+
+<> 2023-10-13T165636.200.json
 
 ###
 
-GET http://127.0.0.1:8080/admin/api/v1/nav-menu?position=pc_home_banner&actionType=1&openPage=news_list
+POST http://127.0.0.1:8080/admin/api/v1/sys-permission
+Content-Type: application/json
+Content-Length: 37
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
-<> 2023-10-12T113511.200.json
+{
+  "name": "列表",
+  "type": 22
+
+}
+
+<> 2023-10-13T165558.200.json
+
+###
+
+POST http://127.0.0.1:8080/admin/api/v1/sys-permission
+Content-Type: application/json
+Content-Length: 36
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "列表",
+  "type": 2
+
+}
+
+<> 2023-10-13T165540.200.json
 
 ###
 

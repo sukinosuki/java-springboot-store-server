@@ -1,17 +1,19 @@
 package com.example.demo.common.enums;
 
 import com.baomidou.mybatisplus.annotation.EnumValue;
+import com.baomidou.mybatisplus.annotation.IEnum;
 import com.fasterxml.jackson.annotation.JsonValue;
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
-public enum NavMenuPosition implements ILabelValue<String> {
-    APP_HOME_MAIN_MENU("app_home_main_menu", "app:首页:主要菜单"),
-    PC_HOME_BANNER("pc_home_banner", "pc:首页:banner");
+public enum SysPermissionMethod implements ILabelValue<String>, IEnum<String> {
+    GET("GET", "get"),
+    POST("POST", "post"),
+    DELETE("DELETE", "delete"),
+    PUT("PUT", "put");
 
-    // @JsonValue对post的body和return的响应体有效
-    @JsonValue
     @EnumValue
+    @JsonValue
     public final String value;
     public final String label;
 

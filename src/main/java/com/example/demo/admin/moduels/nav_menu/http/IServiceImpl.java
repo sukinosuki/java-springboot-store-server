@@ -8,11 +8,12 @@ import com.example.demo.common.AppException;
 import com.example.demo.model.NavMenu;
 import com.example.demo.util.NullUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@org.springframework.stereotype.Service
-public class ServiceImpl implements Service {
+@Service
+public class IServiceImpl implements IService {
     @Autowired
     NavMenuMapper navMenuMapper;
 

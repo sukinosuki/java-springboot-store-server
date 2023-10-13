@@ -15,8 +15,8 @@ public class WebMvcConfig implements WebMvcConfigurer {
     @Override
     public void addFormatters(FormatterRegistry registry) {
 //        WebMvcConfigurer.super.addFormatters(registry);
-        log.info("注册 LabelValueEnumConverterFactory");
 
+        // TIP: 枚举转换只对@RequestParam有效
         registry.addConverterFactory(new LabelValueEnumConverterFactory());
     }
 }

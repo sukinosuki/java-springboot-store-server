@@ -1,22 +1,24 @@
 package com.example.demo.common.enums;
 
 import com.baomidou.mybatisplus.annotation.EnumValue;
+import com.baomidou.mybatisplus.annotation.IEnum;
 import com.fasterxml.jackson.annotation.JsonValue;
 import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
 @AllArgsConstructor
-public enum NavMenuPosition implements ILabelValue<String> {
-    APP_HOME_MAIN_MENU("app_home_main_menu", "app:首页:主要菜单"),
-    PC_HOME_BANNER("pc_home_banner", "pc:首页:banner");
+@NoArgsConstructor
+public enum SysPermissionType  implements ILabelValue<Integer> , IEnum<Integer> {
+    MENU(1, "menu"),
+    NODE(2, "node");
 
-    // @JsonValue对post的body和return的响应体有效
     @JsonValue
     @EnumValue
-    public final String value;
-    public final String label;
+    public Integer value;
+    public String label;
 
     @Override
-    public String getValue() {
+    public Integer getValue() {
         return this.value;
     }
 
@@ -27,6 +29,6 @@ public enum NavMenuPosition implements ILabelValue<String> {
 
     @Override
     public String getKey() {
-        return this.value;
+        return this.value.toString();
     }
 }

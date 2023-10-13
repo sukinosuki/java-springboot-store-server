@@ -5,7 +5,7 @@ import com.example.demo.model.NavMenu;
 
 import java.util.List;
 
-public interface Service {
+interface IService {
 
     void add(NavMenuForm.Add form);
 
