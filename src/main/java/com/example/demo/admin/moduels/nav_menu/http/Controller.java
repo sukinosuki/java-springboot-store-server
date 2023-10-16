@@ -23,7 +23,7 @@ public class Controller {
     IService IService;
 
     @PostMapping
-    R add(@Valid @RequestBody @NotNull NavMenuForm.Add form) {
+    R<Void> add(@Valid @RequestBody @NotNull NavMenuForm.Add form) {
         log.info("添加 nav menu, form: ".concat(form.toString()));
 
         IService.add(form);
@@ -31,8 +31,8 @@ public class Controller {
         return R.ok();
     }
 
-    @PutMapping
-    R update(@Valid @RequestBody @NotNull NavMenuForm.Add form, @PathVariable Long id) {
+    @PutMapping("/{id}")
+    R<Void> update(@Valid @RequestBody @NotNull NavMenuForm.Add form, @PathVariable Long id) {
 
         form.id = id;
 

@@ -5,7 +5,7 @@ import com.example.demo.model.SysPermission;
 
 import java.util.List;
 
-public interface IService {
+interface IService {
 
     void add(SysPermissionForm.Add form);
 
@@ -13,5 +13,5 @@ public interface IService {
 
     void delete(List<Long> ids);
 
-    void all();
+    List<SysPermission> all();
 }

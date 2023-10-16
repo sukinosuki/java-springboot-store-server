@@ -2,6 +2,7 @@ package com.example.demo.admin.moduels.sys_permission.model;
 
 import com.example.demo.common.enums.SysPermissionMethod;
 import com.example.demo.common.enums.SysPermissionType;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.ToString;
 
 import javax.validation.constraints.NotEmpty;
@@ -21,6 +22,9 @@ public class SysPermissionForm {
 
         public Boolean enabled;
 
+        @NotNull(message = "type不能为空")
+        public SysPermissionType type;
+
         @NotNull(message = "method不能为空", groups = {NodeGroup.class})
         public SysPermissionMethod method;
 
@@ -31,9 +35,7 @@ public class SysPermissionForm {
         @NotNull(message = "pid不能为空", groups = {NodeGroup.class})
         public Long pid;
 
-        @NotNull(message = "type不能为空")
-        public SysPermissionType type;
-
+        @JsonIgnore
         public Long id;
 
         public static interface MenuGroup {

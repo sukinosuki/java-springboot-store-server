@@ -1,6 +1,7 @@
 package com.example.demo.model;
 
 import com.baomidou.mybatisplus.annotation.*;
+import com.example.demo.common.BaseTree;
 import com.example.demo.common.enums.SysPermissionMethod;
 import com.example.demo.common.enums.SysPermissionType;
 import lombok.AllArgsConstructor;
@@ -8,12 +9,13 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @TableName("sys_permission")
-public class SysPermission {
+public class SysPermission implements BaseTree<SysPermission> {
 
     @TableId(type = IdType.AUTO)
     public Long id;
@@ -38,4 +40,7 @@ public class SysPermission {
 
     @TableField(fill = FieldFill.INSERT_UPDATE)
     public LocalDateTime updatedAt;
+
+    @TableField(exist = false)
+    public List<SysPermission> children;
 }

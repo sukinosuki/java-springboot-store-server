@@ -24,6 +24,10 @@ public class R<T> {
         return r;
     }
 
+//    public static <T> R<ListData<T>> okList() {
+//
+//    }
+
     public static <T> R<T> ok(T data) {
 
         R r = new R<T>();

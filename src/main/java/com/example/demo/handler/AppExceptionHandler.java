@@ -6,11 +6,14 @@ import com.example.demo.util.NullUtil;
 import com.fasterxml.jackson.databind.exc.MismatchedInputException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.dao.DuplicateKeyException;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.converter.HttpMessageNotReadableException;
+import org.springframework.web.HttpMediaTypeNotSupportedException;
 import org.springframework.web.HttpRequestMethodNotSupportedException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.MissingServletRequestParameterException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
 
@@ -23,6 +26,7 @@ public class AppExceptionHandler {
 
     // TODO: 日志记录请求相关信息
     @ExceptionHandler(Exception.class)
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     R handleException(Exception e) {
         log.error("全局异常, type:".concat(e.getClass().getName()).concat(", msg: ").concat(e.getMessage()));
 
@@ -35,6 +39,12 @@ public class AppExceptionHandler {
         log.error("sql错误, type: ".concat(e.getClass().getName()).concat(", msg: ").concat(e.getMessage()));
 
         return R.serverError(e.getMessage());
+    }
+
+    @ExceptionHandler(HttpMediaTypeNotSupportedException.class)
+    R handleHttpMediaTypeNotSupportedException(HttpMediaTypeNotSupportedException e) {
+
+        return R.paramError("Content type错误", e.getMessage());
     }
 
     @ExceptionHandler(DuplicateKeyException.class)

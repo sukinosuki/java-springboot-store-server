@@ -1,22 +1,28 @@
 package com.example.demo.admin.moduels.sys_permission.http;
 
 import com.baomidou.mybatisplus.core.conditions.update.LambdaUpdateWrapper;
-import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.example.demo.admin.moduels.sys_permission.SysPermissionDao;
 import com.example.demo.admin.moduels.sys_permission.model.SysPermissionForm;
+import com.example.demo.admin.moduels.sys_role_2_sys_permission.SysRole2SysPermissionDao;
 import com.example.demo.common.AppException;
+import com.example.demo.common.enums.SysPermissionType;
 import com.example.demo.model.SysPermission;
+import com.example.demo.model.SysRole2SysPermission;
+import com.example.demo.util.Util;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
-@Service
-public class ServiceImpl implements IService {
+@Service("sysPermissionService")
+class ServiceImpl implements IService {
 
     @Autowired
-    SysPermissionDao sysPermissionDao;
+    SysPermissionDao dao;
+
+    @Autowired
+    SysRole2SysPermissionDao sysRole2SysPermissionDao;
 
     public void add(SysPermissionForm.Add form) {
 
@@ -24,14 +30,17 @@ public class ServiceImpl implements IService {
         // 区分type MENU | NODE
         SysPermission permission = new SysPermission();
         permission.enabled = form.enabled == null ? true : form.enabled;
-        permission.method = form.method;
-        permission.url = form.url;
         permission.type = form.type;
         permission.name = form.name;
         permission.description = form.description == null ? "" : form.description;
         permission.pid = form.pid == null ? 0 : form.pid;
 
-        sysPermissionDao.save(permission);
+        if (form.type == SysPermissionType.NODE) {
+            permission.method = form.method;
+            permission.url = form.url;
+        }
+
+        dao.save(permission);
     }
 
     @Override
@@ -48,7 +57,7 @@ public class ServiceImpl implements IService {
                 .set(SysPermission::getUrl, form.url)
                 .set(SysPermission::getPid, form.pid == null ? 0 : form.pid);
 
-        boolean ok = sysPermissionDao.update(uw);
+        boolean ok = dao.update(uw);
 
         if (!ok) {
             throw AppException.actionFailError(null);
@@ -59,16 +68,26 @@ public class ServiceImpl implements IService {
     public void delete(List<Long> ids) {
 
         // TODO: 删除前需要判断是否有角色关联了要删除的权限
+        boolean ok = dao.removeBatchByIds(ids);
 
-        boolean ok = sysPermissionDao.removeBatchByIds(ids);
         if (!ok) {
-            throw AppException.actionFailError(null);
+            throw AppException.serveError("删除权限失败");
+        }
+
+        ok = sysRole2SysPermissionDao.removeByPermissionIds(ids);
+
+        if (!ok) {
+            throw AppException.serveError("删除角色2权限失败");
         }
     }
 
     @Override
-    public void all() {
+    public List<SysPermission> all() {
 
-        // TODO: 获取树形结构的权限列表
+        List<SysPermission> list = dao.list();
+
+        List<SysPermission> trees = Util.listToTree(list);
+
+        return trees;
     }
 }
