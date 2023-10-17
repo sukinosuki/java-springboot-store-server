@@ -44,6 +44,7 @@ public class ServiceImpl implements IService {
                 .set(GoodsCategory::getSort, form.sort == null ? 0 : form.sort);
 
         boolean ok = dao.update(uw);
+
         if (!ok) {
             throw AppException.serveError("更新商品分类失败");
         }

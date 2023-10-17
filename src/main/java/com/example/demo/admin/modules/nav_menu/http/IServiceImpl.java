@@ -41,7 +41,8 @@ public class IServiceImpl implements IService {
     public void update(NavMenuForm.Add form) {
         LambdaUpdateWrapper<NavMenu> uw = new LambdaUpdateWrapper<>();
 
-        uw.eq(NavMenu::getId, form.id).set(NavMenu::getDescription, form.description)
+        uw.eq(NavMenu::getId, form.id)
+                .set(NavMenu::getDescription, form.description)
                 .set(NavMenu::getName, form.name)
                 .set(NavMenu::getActionType, form.actionType)
                 .set(NavMenu::getOpenPage, form.openPage)

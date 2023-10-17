@@ -28,7 +28,7 @@ public class SysUserForm {
 
         @NotEmpty(message = "roleIds不能为空")
         @NotNull(message = "roleIds不能为空")
-        @Size(max = 10, message = "用色角色不能超过10个")
+        @Size(max = 10, message = "用户角色不能超过10个")
         public List<Long> roleIds;
 
         public Boolean enabled;

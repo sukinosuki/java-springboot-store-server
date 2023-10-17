@@ -1,10 +1,16 @@
 package com.example.demo.common;
 
+import com.example.demo.common.enums.QueryOrder;
+
 public abstract class BaseQuery {
 
     public Long page;
 
     public Long size;
+
+    public QueryOrder order;
+
+    public String orderField;
 
     public Long getSize() {
         return this.getSafeSize();
