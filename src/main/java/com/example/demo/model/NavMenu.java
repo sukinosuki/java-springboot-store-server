@@ -15,7 +15,6 @@ import java.time.LocalDateTime;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-//@Accessors(chain = true)
 @TableName(value = "nav_menu")
 public class NavMenu {
     @TableId(type = IdType.AUTO)
@@ -25,7 +24,6 @@ public class NavMenu {
 
     public String cover;
 
-//    @TableField(typeHandler = JacksonTypeHandler.class)
     public NavMenuActionType actionType;
 
     public NavMenuPosition position;

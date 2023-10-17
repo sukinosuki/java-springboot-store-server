@@ -12,5 +12,6 @@ import lombok.NoArgsConstructor;
 public class SysRole2SysPermission {
 
     public Long roleId;
+
     public Long permissionId;
 }

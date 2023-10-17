@@ -10,6 +10,10 @@ spring:
 #  jackson:
 #    property-naming-strategy: SNAKE_CASE
 
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
 jwt:
   secret: hanami@233323332333233323332333233323332333
   expiration: 86400000

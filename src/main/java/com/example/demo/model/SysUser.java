@@ -1,9 +1,7 @@
 package com.example.demo.model;
 
 import com.baomidou.mybatisplus.annotation.*;
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
@@ -11,17 +9,21 @@ import java.time.LocalDateTime;
 @Data
 public class SysUser {
     @TableId(type = IdType.AUTO)
-    Long id;
+    public Long id;
 
-    String username;
-    String password;
-    String avatar;
-    Boolean enabled;
-    String nickname;
+    public String username;
+
+    public String password;
+
+    public String avatar;
+
+    public Boolean enabled;
+
+    public String nickname;
 
     @TableField(fill = FieldFill.INSERT)
-    LocalDateTime createdAt;
+    public LocalDateTime createdAt;
 
     @TableField(fill = FieldFill.INSERT_UPDATE)
-    LocalDateTime updatedAt;
+    public LocalDateTime updatedAt;
 }

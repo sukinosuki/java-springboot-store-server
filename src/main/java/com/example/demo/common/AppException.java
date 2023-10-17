@@ -24,6 +24,10 @@ public class AppException extends RuntimeException {
         return new AppException(AppErrorCode.SERVER_ERROR, msg);
     }
 
+    public static AppException recordNotFoundError(String msg) {
+        return new AppException(AppErrorCode.RECORD_NOT_FOUND, msg);
+    }
+
     public static AppException paramError(String msg){
         return new AppException(AppErrorCode.PARAM_ERROR, msg);
     }

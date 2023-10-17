@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.demo.admin.modules.sys_user.SysUserMapper">
+
+    <resultMap id="allRes" type="com.example.demo.admin.modules.sys_user.model.SysUserResSimple">
+        <id column="id" property="id"/>
+        <result column="username" property="username"/>
+        <result column="avatar" property="avatar"/>
+        <result column="enabled" property="enabled"/>
+        <result column="created_at" property="createdAt"/>
+        <result column="updated_at" property="updatedAt"/>
+
+        <collection property="roles" javaType="java.util.ArrayList"
+                    ofType="com.example.demo.admin.modules.sys_user.model.SysUserResSimple$Role">
+            <result column="rId" property="id"/>
+            <result column="rName" property="name"/>
+        </collection>
+    </resultMap>
+
+    <select id="all" parameterType="com.example.demo.admin.modules.sys_user.model.SysUserForm$Query"
+            resultMap="allRes">
+        SELECT u.*, r.id rId, r.`name` rName
+        FROM (SELECT id, username, avatar, enabled, created_at, updated_at FROM `sys_user` ORDER BY id desc LIMIT #{query.safeOffset}, #{query.safeSize}) u
+                 LEFT JOIN sys_user_2_sys_role ur
+                           ON u.id = ur.uid
+                 LEFT JOIN sys_role r
+                           ON ur.role_id = r.id
+    </select>
+
+    <select id="detail" parameterType="Long" resultMap="allRes">
+        SELECT u.*, r.id rId, r.`name` rName
+        FROM sys_user u
+                 LEFT JOIN sys_user_2_sys_role ur
+                           ON u.id = ur.uid
+                 LEFT JOIN sys_role r
+                           ON ur.role_id = r.id
+        WHERE u.id = #{id}
+
+    </select>
+</mapper>
