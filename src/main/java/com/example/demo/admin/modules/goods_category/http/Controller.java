@@ -1,13 +1,13 @@
 package com.example.demo.admin.modules.goods_category.http;
 
 import com.example.demo.admin.modules.goods_category.model.GoodsCategoryForm;
-import com.example.demo.common.ListData;
 import com.example.demo.common.R;
 import com.example.demo.model.GoodsCategory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
+import java.util.List;
 
 @RestController("goodsCategoryController")
 @RequestMapping("/admin/api/v1/goods-category")
@@ -34,8 +34,8 @@ public class Controller {
     }
 
     @GetMapping
-    R<ListData<GoodsCategory>> all() {
-        ListData<GoodsCategory> listData = service.all();
+    R<List<GoodsCategory>> all() {
+        List<GoodsCategory> listData = service.all();
 
         return R.ok(listData);
     }

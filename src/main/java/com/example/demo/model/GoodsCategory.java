@@ -2,17 +2,19 @@ package com.example.demo.model;
 
 
 import com.baomidou.mybatisplus.annotation.*;
+import com.example.demo.common.BaseTree;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @TableName("goods_category")
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class GoodsCategory {
+public class GoodsCategory implements BaseTree<GoodsCategory> {
     @TableId(type = IdType.AUTO)
     public Long id;
 
@@ -29,4 +31,7 @@ public class GoodsCategory {
 
     @TableField(fill = FieldFill.INSERT_UPDATE)
     public LocalDateTime updatedAt;
+
+    @TableField(exist = false)
+    public List<GoodsCategory> children;
 }

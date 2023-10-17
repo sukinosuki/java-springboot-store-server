@@ -2,8 +2,9 @@ package com.example.demo.admin.modules.goods_category.http;
 
 
 import com.example.demo.admin.modules.goods_category.model.GoodsCategoryForm;
-import com.example.demo.common.ListData;
 import com.example.demo.model.GoodsCategory;
+
+import java.util.List;
 
 interface IService {
 
@@ -13,5 +14,5 @@ interface IService {
 
     void delete(Long id);
 
-    ListData<GoodsCategory> all();
+    List<GoodsCategory> all();
 }
