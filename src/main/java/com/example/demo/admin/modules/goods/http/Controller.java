@@ -28,6 +28,8 @@ public class Controller {
         query.size = size;
         query.order = order;
         query.orderField = orderField;
+
+        // TODO: 分页未实现
         ListData<Goods> listData = service.all(query);
 
         return R.ok(listData);

@@ -1,0 +1,744 @@
+{
+	"info": {
+		"_postman_id": "3c20e8de-fc65-4f84-a4bc-ebdd163b481f",
+		"name": "java-shop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24406099"
+	},
+	"item": [
+		{
+			"name": "sys-role",
+			"item": [
+				{
+					"name": "all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/admin/api/v1/sys-role?size=10&page=1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"admin",
+								"api",
+								"v1",
+								"sys-role"
+							],
+							"query": [
+								{
+									"key": "size",
+									"value": "10"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "order",
+									"value": "desc",
+									"disabled": true
+								},
+								{
+									"key": "orderField",
+									"value": "updated_at",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"admin10\",\r\n    \"roleIds\": [1,2,3,4,5,6,7,8],\r\n    \"description\": 21,\r\n    \"id\":true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/admin/api/v1/sys-role",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"admin",
+								"api",
+								"v1",
+								"sys-role"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"财务\",\r\n    \"roleIds\": [1,2,3,4,5,6,7,8],\r\n    \"description\": 21,\r\n    \"id\":true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/admin/api/v1/sys-role",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"admin",
+										"api",
+										"v1",
+										"sys-role"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "trace-id",
+									"value": "1a79232077f94a4683b51d2c3e4cb1c2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 16 Oct 2023 03:50:15 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 0,\n    \"msg\": \"ok\",\n    \"errMsg\": null,\n    \"data\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"超级管理员\",\r\n    \"roleIds\": [1,2,3,4,5,6,7,8],\r\n    \"enabled\": false,\r\n    \"description\": \"des11\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/admin/api/v1/sys-role/5",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"admin",
+								"api",
+								"v1",
+								"sys-role",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/admin/api/v1/sys-role/5",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"admin",
+								"api",
+								"v1",
+								"sys-role",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "sys-permission",
+			"item": [
+				{
+					"name": "list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/admin/api/v1/sys-permission",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"admin",
+								"api",
+								"v1",
+								"sys-permission"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"权限列表\",\r\n    \"type\": 2,\r\n    \"description\": \"描述\",\r\n    \"enabled\": 1,\r\n    \"method\": \"GET\",\r\n    \"url\": \"/admin/api/v1/sys-permission\",\r\n    \"pid\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/admin/api/v1/sys-permission",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"admin",
+								"api",
+								"v1",
+								"sys-permission"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "添加菜单",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"角色\",\r\n    \"type\": 1,\r\n    \"description\": \"描述\",\r\n    \"enabled\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/admin/api/v1/sys-permission",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"admin",
+										"api",
+										"v1",
+										"sys-permission"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "trace-id",
+									"value": "53fb08956b7e4b17a86076ac4fe2d58e"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 16 Oct 2023 06:27:01 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 0,\n    \"msg\": \"ok\",\n    \"errMsg\": null,\n    \"data\": null\n}"
+						},
+						{
+							"name": "添加按钮",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"权限列表\",\r\n    \"type\": 2,\r\n    \"description\": \"描述\",\r\n    \"enabled\": 1,\r\n    \"method\": \"GET\",\r\n    \"url\": \"/admin/api/v1/sys-permission\",\r\n    \"pid\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/admin/api/v1/sys-permission",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"admin",
+										"api",
+										"v1",
+										"sys-permission"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "trace-id",
+									"value": "67f1f2a1f7924576bb0a26a939d3a736"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 16 Oct 2023 06:56:41 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 0,\n    \"msg\": \"ok\",\n    \"errMsg\": null,\n    \"data\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": 1,\r\n    \"name\": \"权限\",\r\n    \"enabled\": 1,\r\n    \"description\": \"des11\",\r\n    \"pid\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/admin/api/v1/sys-permission/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"admin",
+								"api",
+								"v1",
+								"sys-permission",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/admin/api/v1/sys-permission/622",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"admin",
+								"api",
+								"v1",
+								"sys-permission",
+								"622"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "sys-user",
+			"item": [
+				{
+					"name": "list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/admin/api/v1/sys-user?size=10&page=1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"admin",
+								"api",
+								"v1",
+								"sys-user"
+							],
+							"query": [
+								{
+									"key": "size",
+									"value": "10"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"roleIds\": [7,9,10,11,12,13],\r\n    \"password\": \"233233\",\r\n    \"username\": \"test2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/admin/api/v1/sys-user",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"admin",
+								"api",
+								"v1",
+								"sys-user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": ":id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/admin/api/v1/sys-user/5",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"admin",
+								"api",
+								"v1",
+								"sys-user",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/admin/api/v1/sys-user/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"admin",
+								"api",
+								"v1",
+								"sys-user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"233233\",\r\n    \"roleIds\": [1,2,3]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/admin/api/v1/sys-user/9",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"admin",
+								"api",
+								"v1",
+								"sys-user",
+								"9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "goods-category",
+			"item": [
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"分类1:12\",\r\n    \"sort\": 10,\r\n    \"pid\": 0,\r\n    \"enabled\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/admin/api/v1/goods-category",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"admin",
+								"api",
+								"v1",
+								"goods-category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/admin/api/v1/goods-category",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"admin",
+								"api",
+								"v1",
+								"goods-category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"分类1:111\",\r\n    \"sort\": 11,\r\n    \"pid\": 2,\r\n    \"enabled\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/admin/api/v1/goods-category/4",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"admin",
+								"api",
+								"v1",
+								"goods-category",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/admin/api/v1/goods-category/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"admin",
+								"api",
+								"v1",
+								"goods-category",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "goods",
+			"item": [
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"苹果\",\r\n    \"price\": 233,\r\n    \"onShelf\": true,\r\n    \"covers\": [\"11\"],\r\n    \"categoryIds\": [11],\r\n    \"stock\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/admin/api/v1/goods",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"admin",
+								"api",
+								"v1",
+								"goods"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/admin/api/v1/goods",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"admin",
+								"api",
+								"v1",
+								"goods"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"雪梨\",\r\n    \"price\":33.22,\r\n    \"categoryIds\": [12,33],\r\n    \"onShelf\": true,\r\n    \"covers\": [11],\r\n    \"stock\": 333,\r\n    \"description\":\"des111\",\r\n    \"detail\":\"detail11\",\r\n    \"fakeBaseSales\": 11,\r\n    \"sort\": 12\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/admin/api/v1/goods/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"admin",
+								"api",
+								"v1",
+								"goods",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
